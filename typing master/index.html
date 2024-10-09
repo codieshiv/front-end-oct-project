@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speed Typing Game</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quote-display {
+            font-size: 1.5rem;
+            min-height: 150px;
+        }
+        .quote-input {
+            font-size: 1.5rem;
+        }
+        .correct {
+            color: #28a745;
+        }
+        .incorrect {
+            color: #dc3545;
+        }
+        .timer {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Speed Typing Game</h1>
+        <div class="card">
+            <div class="card-body">
+                <p class="quote-display border rounded p-3"></p>
+                <textarea
+                    class="quote-input form-control"
+                    rows="3"
+                    placeholder="Start typing..."
+                    disabled
+                ></textarea>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <button class="btn btn-primary start-button">Start Game</button>
+                    <div class="timer">Time: <span class="time">0</span> sec</div>
+                </div>
+                <div class="mt-3 wpm-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <!-- Game Script -->
+    <script src="script.js"></script>
+</body>
+</html>
